@@ -1,0 +1,112 @@
+.file-upload input[type='file'] {
+    display: none;
+  }
+  
+  body {
+    background: #00B4DB;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    height: 100vh;
+  }
+  
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  
+  .custom-file-label.rounded-pill {
+    border-radius: 50rem;
+  }
+  
+  .custom-file-label.rounded-pill::after {
+    border-radius: 0 50rem 50rem 0;
+  }
+  
+  .fix-align {
+    margin-top: 2px;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #notfound {
+    position: relative;
+    height: 40vh;
+  }
+  
+  #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .notfound {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .notfound .notfound-404 {
+    position: relative;
+    height: 180px;
+    margin-bottom: 20px;
+    z-index: -1;
+  }
+  
+  .notfound .notfound-404 h1 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50% , -50%);
+        -ms-transform: translate(-50% , -50%);
+            transform: translate(-50% , -50%);
+    font-size: 164px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: -12px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: -2px -2px 0px #0083B0, 2px 2px 0px #00B4DB;
+    letter-spacing: -20px;
+  }
+  
+  
+  .notfound .notfound-404 h2 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 120px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00B4DB;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 0px #0083B0;
+    letter-spacing: 13px;
+    margin: 0;
+  }
+  
+  @media only screen and (max-width: 767px) {
+      .notfound .notfound-404 h2 {
+          font-size: 20px;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .notfound .notfound-404 h1 {
+        font-size: 154px;
+    }
+  }
+  

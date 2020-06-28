@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Loading</title>
+		<link rel="stylesheet" href="/static/assets/css/style.css">
+		<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+		<script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="/static/assets/js/jquery-3.3.1.slim.min.js"></script>
+	</head>
+	<body>
+		<section>
+			<div class="container p-5">
+				<div class="row">
+					<div class="col-lg-5 mx-auto">
+						<div class="p-5 bg-white shadow rounded-lg">
+							<img src="/static/assets/img/atlas-hackathon.svg" alt="" width="200" class="d-block mx-auto mb-3">
+							<img src = "/static/images/loading.gif" alt="" width="auto" class="d-block mx-auto mb-2"></img>
+							<h6 class="text-center mb-2 text-muted" id="loadingtext">
+                                Writing your document, the alogrithm takes about two seconds to write each line
+							</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	{% if load %}
+	<script type="text/javascript" src = "/static/assets/js/jquery.js"></script>
+	<script>
+	 $(document).ready(function(){
+         $.ajax({
+            	url: '/Result/',
+            	data_type: 'html',
+            	success: function(data){
+                    window.location.href = "/static/doc/to_serve.pdf";
+            	}
+       	 	});
+	    });
+	</script>
+	{% endif %}
+</html>

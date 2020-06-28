@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <script src="/static/assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/ab210669a6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-lg-5 mx-auto">
+
+                    <!-- Image of the Logo -->
+                    <div class="p-5 bg-white shadow rounded-lg"><img src="/static/assets/img/atlas-hackathon.svg" alt="" width="200" class="d-block mx-auto mb-4">
+		<form method = "POST" enctype = "multipart/form-data">
+			{% csrf_token %}
+                    <!-- Browser to open the file -->
+                    <h6 class="text-center mb-2 text-muted">
+                        Open the PDF you want to handwritten
+                                            </h6>
+
+                    <div class="custom-file overflow-hidden rounded-pill mb-4">
+                        <input id="customFile" type="file" accept=".pdf" class="custom-file-input rounded-pill" name="pdf">
+                        <label for="customFile" class="custom-file-label rounded-pill">Choose file...</label>
+                    </div>
+                    
+                    <!-- Dropdown to select a style -->
+                    <h6 class="text-center mb-2 text-muted">
+                        Choose a handwriting style
+                    </h6>
+
+                    <div class="custom-file overflow-hidden rounded-pill mb-4">
+                        <select class="custom-select rounded-pill" id="inlineFormCustomSelect1" name="style">
+                            <option selected>Choose style</option>
+                            <option value="1">Style 1</option>
+                            <option value="3">Style 2</option>
+                            <option value="5">Style 3</option>
+                            <option value="7">Style 4</option>
+                            <option value="8">Style 5</option>
+                            <option value="9">Style 6</option>
+                            <option value="10">Style 7</option>
+                            <option value="12">Style 8</option>
+                        </select>
+                    </div>
+
+                    <!-- Neatness Slider -->
+                    <!-- <h6 class="text-center mb-2 text-muted">
+                    Select amount of neatness of the style
+                    </h6>
+
+                    <div class="mb-3 container">
+                        <div class="row align-items-centre">
+                            <div class="col-10 fix-align">
+                                <input id="myRange1" type="range" class="custom-range" min="0" max="10" value="0">
+                            </div>
+                            <div class="col-2">
+                                <span id="demo1" class="badge badge-pill badge-primary"></span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Dropdown to choose color of pen -->
+                    <h6 class="text-center mb-2 text-muted">
+                        Select a pen color of your choice
+                    </h6>
+                    
+                    <div class="custom-file overflow-hidden rounded-pill mb-4">
+                        <select class="custom-select rounded-pill" id="inlineFormCustomSelect2" name="color">
+                            <option selected>Choose color</option>
+                            <option value="Bk">Black</option>
+                            <option value="Bl">Blue</option>
+                            <option value="Rd">Red</option>
+                            <option value="Gr">Green</option>
+                        </select>
+                    </div>
+
+                    <!-- Stroke Width Slider -->
+                    <!-- <h6 class="text-center mb-2 text-muted"> -->
+                    <!-- Choose a stroke width -->
+                    <!-- </h6> -->
+
+                    <!-- <div class="mb-4"> -->
+                    <!--     <input id="myRange2" type="range" class="custom-range" min="1" max="2" step="0.1" value="1.5" name="slider"> -->
+                    <!--     <div class="d-flex justify-content-between"> -->
+                    <!--         <span class="badge badge-pill badge-primary">Pencil</span> -->
+                    <!--         <span class="badge badge-pill badge-primary">Pen</span> -->
+                    <!--         <span class="badge badge-pill badge-primary">Marker</span> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="form-check mb-3"> -->
+                    <!--     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="setting"> -->
+                    <!--     <label class="form-check-label" for="defaultCheck1"> -->
+                    <!--         Remember this Settings -->
+                    <!--     </label> -->
+                    <!-- </div> -->
+
+                    <!-- Submit Button -->
+                    <div class="columns download text-center">
+                        <!-- <a href="assets/doc/file.pdf" class="button submit btn btn-primary btn-block rounded-pill shadow" target="_blank"> -->
+				<input type="submit" class="btn btn-primary" ></input>
+
+                        <!-- </a> -->
+                    </div>
+                    <br>
+                    <!-- <small><h6 class="text-center mb-2 text-muted"> -->
+                    <!--     *Support for numbers and math is still in beta, -->
+                    <!--     Please use word populated pdf -->
+                    <!--     </h6></small> -->
+		</input>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <!-1- JS for Displaying Number for Slider -1-> -->
+    <!-- <script> -->
+    <!--     // Neatness Slider -->
+    <!--     var slider1 = document.getElementById("myRange1"); -->
+    <!--     var output1 = document.getElementById("demo1"); -->
+    <!--     output1.innerHTML = slider1.value; -->
+
+    <!--     slider1.oninput = function () { -->
+    <!--         output1.innerHTML = this.value; -->
+    <!--     } -->
+
+    <!--     // Stroke Width Slider -->
+    <!--     var slider2 = document.getElementById("myRange2"); -->
+    <!--     var output2 = document.getElementById("demo2"); -->
+    <!--     output2.innerHTML = slider2.value; -->
+
+    <!--     slider2.oninput = function () { -->
+    <!--         output2.innerHTML = this.value; -->
+    <!--     } -->
+    <!-- </script> -->
+</body>
+
+</html>
