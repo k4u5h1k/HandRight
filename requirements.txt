@@ -1,3 +1,4 @@
+pypdf2
 django
 matplotlib>=2.1.0
 pandas>= 0.22.0
