@@ -19,12 +19,12 @@ def forminput(request):
             for chunk in fl.chunks():
                 handle.write(chunk)
         # print(settings.pdf_file['pdf'].read())
-        request.session['hello'] =[int(dic['style'][0]), dic['color'][0]] 
+        request.session['writing_style'] =[int(dic['style'][0]), dic['color'][0]] 
         return render(request, "loading.html", {'load' : True})
     return render(request,"index.html",{})
 
 def ML(request):
-    data = request.session.get('hello')
+    data = request.session.get('writing_style')
     style = data[0]
     color = data[1]
     # fl = settings.pdf_file['pdf']
