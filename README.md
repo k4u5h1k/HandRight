@@ -9,4 +9,6 @@ Handright converts your pdf document into a handwritten one!
 
 IF/WHEN EXPORTING YOUR WORD FILE AS A PDF PLEASE USE THE "Suitable for electronic distribution option" INSTEAD OF "Suitable for printing" (which somehow breaks the PDF text extractor python library)
 
+hosted [here](http://kaushik.me/handright).    
 If you run into a locale error set the approprate environment variable after googling that error
+ 
