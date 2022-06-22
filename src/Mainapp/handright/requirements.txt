@@ -6,4 +6,4 @@ scipy>=1.0.0
 svgwrite>=1.1.12
 tensorflow==1.6.0
 cairosvg
-numpy==1.16.4
+numpy==1.22.0
